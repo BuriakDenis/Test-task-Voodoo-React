@@ -3,7 +3,7 @@ import "./Button.css";
 
 export default function Button() {
   return (
-    <div className="Button">
+    <div className="button">
     Send Message
  </div>
  )

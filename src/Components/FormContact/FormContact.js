@@ -1,7 +1,8 @@
 import React from "react";
 import MapLocation from "../MapLocation/MapLocation";
-import 
+import Button from "../Button/Button";
 import "./FormContact.css";
+import Select from "../Select/Select";
 
 export default function FormContact() {
   return (
@@ -13,15 +14,41 @@ export default function FormContact() {
             The Voodoo team is looking forward to hearing from you!
           </div>
           <form className="contact__form-content">
-            <input className="" type="text" />
-            <input className="" type="text" />
-            <input className="" type="text" />
-            <input className="" type="text" />
-            <input className="" type="number" />
-            <input className="" type="text" />
-            <input className="" type="text" />
+            <input
+              className="contact__input"
+              type="text"
+              placeholder="Full Name*"
+              required
+            />
+            <input
+              className="contact__input"
+              type="text"
+              placeholder="Title/Position*"
+              required
+            />
+            <Select title={"Practice / Institution*"} />
+            <input
+              className="contact__input"
+              type="email"
+              placeholder="Email Address*"
+              required
+            />
+            <input
+              className="contact__input"
+              type="tel"
+              placeholder="Phone Number*"
+              required
+            />
+            <Select title={"Medical Profession*"} />
+            <Select title={"Type of Inquiry*"} class={"input-injury"} />
+            <textarea
+              className="contact__input input-message"
+              type="text"
+              placeholder="Enter Message*"
+              required
+            />
           </form>
-          <Button/>
+          <Button />
         </div>
         <MapLocation />
       </div>
