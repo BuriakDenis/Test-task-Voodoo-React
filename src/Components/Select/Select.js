@@ -22,7 +22,7 @@ export default function Select(props) {
         {selectedItem
           ? items.find((item) => item.id == selectedItem).label
           : `${props.title}`}
-        <span className={`icon ${isOpen && "open"}`}>
+        <span className={` icon ${isOpen && "open"}`}>
           <svg
             width="10"
             height="6"
@@ -44,7 +44,10 @@ export default function Select(props) {
         {items.map((item) => (
           <div
             className={`dropdown-item ${item.id == selectedItem && "selected"}`}
-            onClick={(e) => handleItemClick(e.target.id)}
+            onClick={(e) => {
+              handleItemClick(e.target.id);
+              toggleDropdown();
+            }}
             id={item.id}
           >
             {item.label}

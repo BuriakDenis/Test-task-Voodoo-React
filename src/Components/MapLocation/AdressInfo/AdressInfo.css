@@ -48,3 +48,37 @@
   display: flex;
   justify-content: flex-start;
 }
+@media (max-width: 1024px) {
+  .adress__window {
+    top: 22%;
+    left: 39%;
+  }
+}
+@media (max-width: 990px) {
+  .adress__window {
+    top: 22%;
+    left: 35%;
+  }
+}
+@media (max-width: 768px) {
+  .adress__window {
+    top: 22%;
+    left: 35%;
+  }
+}
+@media (max-width: 425px) {
+  .adress__window {
+    top: 22%;
+    left: 24%;
+  }
+}
+@media (max-width: 375px) {
+  .adress__window {
+    left: 18%;
+  }
+}
+@media (max-width: 325px) {
+  .adress__window {
+    left: 6%;
+  }
+}

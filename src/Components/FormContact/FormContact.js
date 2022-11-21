@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import MapLocation from "../MapLocation/MapLocation";
 import Button from "../Button/Button";
 import "./FormContact.css";
@@ -40,7 +40,7 @@ export default function FormContact() {
               required
             />
             <Select title={"Medical Profession*"} />
-            <Select title={"Type of Inquiry*"} class={"input-injury"} />
+            <Select title={"Type of Inquiry*"} class={"input-injury"} width={"input-injury-width"} />
             <textarea
               className="contact__input input-message"
               type="text"

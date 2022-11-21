@@ -1,24 +1,14 @@
 import React, { useState } from "react";
 import { GoogleMap, LoadScript } from "@react-google-maps/api";
 import { Marker } from "@react-google-maps/api";
-import { InfoWindow } from "@react-google-maps/api";
 import "./MapLocation.css";
 import AdressInfo from "./AdressInfo/AdressInfo";
 
-const containerStyle = {
-  position: "relative",
-  height: "936px",
-  flex: "0 1 42%",
-  marginTop: " 20px",
-};
 const center = {
-  lat: 43.451859,
-  lng: -80.5153222,
+  lat: 43.445276,
+  lng: -80.515460,
 };
-const position = {
-  lat: 43.451859,
-  lng: -80.5153222,
-};
+
 
 const defaultOptions = {
   panControl: false,
@@ -218,16 +208,15 @@ export default function MapLocation() {
   const onMapClick = () => {
     setOpen(false);
   };
-  console.log(open);
   return (
     <LoadScript googleMapsApiKey="AIzaSyDp4mypNUkiisiumY6NRcEiE0nOY9EuOO0">
       <GoogleMap
         onClick={() => {
           onMapClick();
         }}
-        mapContainerStyle={containerStyle}
+        mapContainerClassName={"location"}
         center={center}
-        zoom={17}
+        zoom={15.8}
         options={{
           styles: exampleMapStyles,
           options: defaultOptions,
@@ -252,7 +241,7 @@ export default function MapLocation() {
               scale: 1,
               strokeWeight: 2,
             }}
-            position={position}
+            position={center}
           />
         </>
       </GoogleMap>
